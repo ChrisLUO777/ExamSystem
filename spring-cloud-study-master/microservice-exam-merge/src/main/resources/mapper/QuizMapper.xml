@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.QuizMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.Quiz">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="qid" jdbcType="INTEGER" property="qid" />
+    <result column="quiz" jdbcType="VARCHAR" property="quiz" />
+    <result column="rightans" jdbcType="VARCHAR" property="rightans" />
+    <result column="point" jdbcType="INTEGER" property="point" />
+    <result column="paperid" jdbcType="INTEGER" property="paperid" />
+  </resultMap>
+</mapper>

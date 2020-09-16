@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<htmL>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=1150, user-scalable=no">
+    <title>Piggy Metrics</title>
+    <link rel="stylesheet" type="text/css" href="css/launch.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/animation.css">
+    <style>
+        #bubble, #indicator, #save, #piggyicon, #rublesign, .arrowup, .arrowdown, .incomes-sprite-title, .close-sign, .modal-save-icon,
+        #modaldeletecross, .initicons-arrow, .expenses-sprite-title, .savings-sprite-title, .triangle, .noUi-handle, .noUi-handle:after  {
+            background-image: url("images/sprites.png");
+            background-size: 538px 84px;
+        }
+        @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+        only screen and (min-resolution: 144dpi) {
+            #bubble, #indicator, #save, #piggyicon, #rublesign, .arrowup, .arrowdown, .incomes-sprite-title, .close-sign, .modal-save-icon,
+            #modaldeletecross, .initicons-arrow, .expenses-sprite-title, .savings-sprite-title, .triangle, .noUi-handle, .noUi-handle:after {
+                background-image: url("images/sprites@2x.png");
+            }
+        }
+    </style>
+</head>
+    <body>
+
+        <div id="settings_hat"></div>
+
+        <div id="lastlogo">
+            <div id="lastlogoflipper">
+                <div id="logo_settings">
+                    <div id="logoclickplace"></div><div id="bubble"><div id="indicator"></div></div>
+                </div>
+                <div id="logo_statistic"></div>
+            </div>
+        </div>
+
+        <section class="toppage">
+
+            <!-- GREETING PAGE -->
+
+            <div id="logo_greeting"></div>
+            <div id="centerbox">
+                <div id="avatarcontainer" class="forward plus">
+                    <div class="avatar"></div>
+                </div>
+            </div>
+            <div id="lefttitle"><span class="bluetext"> Hello!</span></div>
+            <div id="righttitle"><span class="bluetext">Your email: </span></div>
+            <div id="bottombuttons">
+                <div id="plus" class="plus">
+                    <div id="plusborder">
+                        <div id="plusone"></div>
+                        <div id="plustwo"></div>
+                    </div>
+                    <div id="plustext">Get in</div>
+                </div>
+                <form id="logout" autocomplete="off">
+                    <div id="minus">
+                        <div id="minusborder">
+                            <div id="minusone"></div>
+                        </div>
+                        <div id="minustext">Log out</div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- SETTINGS PAGE -->
+
+            <div id="settingspage">
+                <div id="swipefield"></div>
+
+                <div id="incomes" class="columns"><div class="incomes-sprite-title zoomplus incomebutton"></div>
+                    <div id="noincomes" class="incomebutton">
+                        <div class="hoverplace"></div>
+                        <div class="majorplusitem">
+                            <div class="plusitemborder"></div>
+                            <div class="plusitemone"></div>
+                            <div class="plusitemtwo"></div>
+                        </div>
+                        <span class="plusitemtitle">Add income</span>
+                        <span class="plusitemitalic">Empty space</span>
+                    </div>
+                    <div class="plusitem" id="incomesplusitem">
+                        <div class="plusitemborder incomebutton"></div>
+                        <div class="plusitemone"></div>
+                        <div class="plusitemtwo"></div>
+                    </div>
+                    <div class="blueline"></div>
+                    <div class="brownline"></div>
+                    <div id="incomedown"><div class="arrowup"></div>forth</div>
+                    <div id="incomeup"><div class="arrowdown"></div>back</div>
+                    <div class="frame">
+                        <div id="incomewrapper" class="wrapper">
+                            <div id="incomeslider"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="expenses" class="columns"><div class="expenses-sprite-title zoomplus expensebutton"></div>
+                    <div id="noexpenses" class="expensebutton">
+                        <div class="hoverplace"></div>
+                        <div class="majorplusitem">
+                            <div class="plusitemborder expensebutton"></div>
+                            <div class="plusitemone"></div>
+                            <div class="plusitemtwo"></div>
+                        </div>
+                        <span class="plusitemtitle">Add expense</span>
+                        <span class="plusitemitalic">Empty space</span>
+                    </div>
+                    <div class="plusitem" id="expensesplusitem">
+                        <div class="plusitemborder"></div>
+                        <div class="plusitemone"></div>
+                        <div class="plusitemtwo"></div>
+                    </div>
+                    <div class="blueline"></div>
+                    <div class="brownline"></div>
+                    <div id="expensedown"><div class="arrowup"></div>forth</div>
+                    <div id="expenseup"><div class="arrowdown"></div>back</div>
+                    <div class="frame">
+                        <div id="expensewrapper" class="wrapper">
+                            <div id="expenseslider"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="savings" class="columns"><div class="savings-sprite-title"></div>
+                    <div class="blueline"></div>
+                    <div class="brownline"></div>
+                    <div id="topsavingsline">
+                        <div id="piggyicon"></div>
+                        <span class="savingstitle14">My spare money</span>
+                        <span class="savingstitle12">At the moment</span>
+                        <div id="rublebox"></div><div id="rublesign"></div>
+                        <input type="text" name="savingsvalue" id="savingsvalue" data-a-sep=" " data-v-min="0" data-v-max="999999999" data-l-zero="deny" maxlength="12" autocomplete="off">
+                    </div>
+                    <div id="bottomsavingsline">
+                        <input type="checkbox" name="deposit" id="deposit">
+                        <label for="deposit" class="button"></label>
+                        <label for="deposit" class="savingsdeposit">Accumulation account</label>
+                        <span class="savingspercent">Interest</span>
+                        <input type="text" name="percentvalue" id="percentvalue" data-a-sep=""  data-v-min="0.00" data-v-max="99.99" data-l-zero="deny" data-a-sign=" %" data-w-empty="sign" data-p-sign="s" maxlength="5" data-a-pad="false" size="6" data-a-dec="." autocomplete="off">
+                        <input type="checkbox" name="capitalization" id="capitalization">
+                        <label for="capitalization" class="button"></label>
+                        <label for="capitalization" class="savingscapital">Monthly capitalization</label>
+                    </div>
+                </div>
+                <div id="savebutton"><div id="leftborder"></div><div id="centerborder"></div><div id="rightborder"></div><div id="save"></div></div>
+            </div>
+
+            <form action="user/save" id="saveoptions" method="post" autocomplete="off"></form>
+
+            <!-- NOTES WINDOW -->
+            <div id="overlay"></div>
+            <div id="add-notes">
+                <div class="modal-content">
+                    <div class="notes-title">Financial notes</div>
+                    <div class="modal-close"><div class="close-sign"></div></div>
+                    <div class="notes-save"><div class="modal-save-icon"></div><div class="modal-save-text">Save changes</div></div>
+                    <textarea id="notes" class="notes-input" autocomplete="off" maxlength="5000"></textarea>
+                </div>
+            </div>
+            <!-- MODAL WINDOWS -->
+
+            <div id="add-modal">
+                <div class="modal-content">
+                    <div class="modal-title mainmodaltitle"></div>
+                    <div class="modal-close"><div class="close-sign"></div></div>
+                    <input type="text" name="modalvalue" class="modalvalue" data-a-sep=" " data-v-min="0" data-v-max="999999999" data-l-zero="deny" maxlength="12" autocomplete="off" value="0">
+                    <div class="modalselects">
+                        <select class="modalcurrency">
+                            <option value="RUB">rubles</option>
+                            <option selected="selected" value="USD">dollars</option>
+                            <option value="EUR">euro</option>
+                        </select>
+
+                        <select class="modalperiod">
+                            <option value="YEAR">Per year</option>
+                            <option value="QUARTER">Per quarter</option>
+                            <option selected="selected" value="MONTH">Per month</option>
+                            <option value="DAY">Per day</option>
+                            <option value="HOUR">Per hour</option>
+                        </select>
+                    </div>
+                    <div class="initicons"><div id="chooseicon" class="cart-icon"></div><div class="initicons-arrow"></div></div>
+                    <input class="modaltitle" placeholder="Title" type="text" autocomplete="off" maxlength="18"/>
+                    <div class="modal-save"><div class="modal-save-icon"></div><div class="modal-save-text">Save changes</div></div>
+                    <div class="modal-delete"><div id="modaldeletecross"></div><div class="modal-delete-text">Remove</div></div>
+
+                    <!-- Expenses table -->
+                    <div class="modalexpensessurface">
+                        <div class="modal-title">Choose an icon</div>
+                        <table class="modaltable modalforward" id="modalexpensetable">
+                            <tr>
+                                <td><div class="imgbox"><div class="iconbox auto"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox gas"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox home"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox baby"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="imgbox"><div class="iconbox cart"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox clothes"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox phone"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox utilities"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="imgbox"><div class="iconbox island"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox earth"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox meal"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox sport"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="imgbox"><div class="iconbox medical"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox tv"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox smoking"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox other"></div></div></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Incomes table -->
+                    <div class="modalincomessurface">
+                        <div class="modal-title">Choose an icon</div>
+                        <table class="modaltable modalforward" id="modalincomestable">
+                            <tr>
+                                <td><div class="imgbox"><div class="iconbox edu"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox graphs"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox wallet"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox case"></div></div></td>
+                            </tr>
+                            <tr>
+                                <td><div class="imgbox"><div class="iconbox rub"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox euro"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox doll"></div></div></td>
+                                <td><div class="imgbox"><div class="iconbox gbp"></div></div></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section id="loginpage">
+            <div id="flipper">
+                <div class="FRONTCARD">
+                    <div id="piggy"></div>
+                    <div id="logotext"></div>
+                    <div class="flipinfo" id="info"></div>
+                    <div id="secondenter"></div>
+                    <div id="preloader"></div>
+                    <div id="wrapper">
+                        <!-- LOG IN FORMS -->
+                        <div id="cube">
+                            <form action="user/login" id="auth" method="post" autocomplete="off">
+                                <div class="side" id="side1">
+                                    <div id="backlogin"></div>
+                                    <div id="enter"></div>
+                                    <input class="frontforms" id="frontloginform" name="username" placeholder="enter your login" type="text" autocomplete="off"/>
+                                </div>
+                                <div class="side" id="side2">
+                                    <div id="backpassword"></div>
+                                    <input class="frontforms" id="frontpasswordform" name="password" placeholder="password" type="password" autocomplete="off"/>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="fliptext">Or <a href="#">create new account</a></div>
+                </div>
+
+                <div class="BACKCARD">
+                    <div id="infopage">
+                        <span class="frominfo" id="infosubtitle">Pixam is the best exam website</span>
+                        <span class="frominfo" id="infotitle">Pixam can help you do those!</span>
+                        <div class="infoflipback frominfo"></div>
+                        <div id="infoleft" class="infocolumn frominfo">
+                            <div id="leftcolumn">import your exam<br>
+                                <div class="columnimage"></div>
+                                <span class="columnfooter">Use the template to import the paper and persons who need to participate.</span>
+                            </div>
+                        </div>
+                        <div id="infocenter"class=" infocolumn frominfo">
+                            <div id="centercolumn">enter tht exam<br>
+                                <div class="columnimage"></div>
+                                <span class="columnfooter">choose the exam which you want to enter and then you can enjoy it.</span>
+                            </div>
+                        </div>
+                        <div id="inforight"class="infocolumn frominfo">
+                            <div id="rightcolumn">check the goals<br>
+                                <div class="columnimage"></div>
+                                <span class="columnfooter">After finish your exam,you will get the goal whicn can be checked</span>
+                            </div>
+                        </div>
+                        <div id="infoline"></div>
+                        <a id="infofooter" href="index.html">&copy; 2017 pixam.com</a>
+                    </div>
+                    <div id="regpage">
+                        <div id="franklin">
+                            <div class="avatar"></div>
+                        </div>
+                        <div id="createaccount"></div>
+                        <div class="fliptext">Or <a href="#">use existing account</a></div>
+                        <div id="registrationforms">
+                            <form id="signup" autocomplete="off">
+                                <input class="backforms" name="reg_user_name" id="backloginform" placeholder=" enter a login" type="text"/><br>
+                                <input class="backforms" name="reg_user_password" id="backpasswordform" placeholder=" password" type="password"/>
+                                <button class="regbutton" type="submit" name="registration">Next Step</button>
+                            </form>
+                        </div>
+                        <div id="mailform">
+                            <form id="mail" autocomplete="off">
+                                <input name="usermail" id="backmailform" placeholder="e-mail address" type="text"/><br>
+                                <button class="mailbutton" type="submit" name="mailbutton">Register</button>
+                            </form>
+                            <span class="mailforminfo">Thank you for registration.<br>
+                                <span class="mailforminfosmall">
+                                    Please type in your email as your login username!
+                                </span>
+                            </span>
+                            <div id="skipmail"><a href="#">Cancel the registration</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/lib/touchscreens.js"></script>
+        <script src="js/lib/extrascripts.js"></script>
+        <script src="js/main.js" charset="utf-8"></script>
+        <script src="js/login.js" charset="utf-8"></script>
+        <script src="js/launch.js" charset="utf-8"></script>
+
+    </body>
+</html>

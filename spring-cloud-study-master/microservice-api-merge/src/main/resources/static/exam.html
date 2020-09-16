@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="css/read-review.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link href="vendor/table/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- fileinput CSS -->
+    <link href="vendor/fileinput/fileinput.min.css" rel="stylesheet">
+    <!-- timepicker CSS -->
+    <link href="vendor/timepicker/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Pixam</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#exam">Exam</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#usersetting">User</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" >      </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id="logout" href=javascript:void(0)>logout</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div id="piggy"></div>
+          <br>
+          <div class="intro-lead-in">Welcome To Pixam!</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- exam Grid -->
+    <section class="bg-light" id="exam">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h3 class="section-subheading text-muted">now,start your happy exam.</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 col-sm-6 exam-item">
+            <a class="exam-link" id="create-link" href=javascript:void(0)>
+              <div class="exam-hover">
+                <div class="exam-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/exam/01-thumbnail.jpg" alt="">
+            </a>
+            <div class="exam-caption">
+              <h4>CREATE</h4>
+              <p class="text-muted">Import your paper</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 exam-item">
+            <a class="exam-link" id="exam-enter-link" href=javascript:void(0)>
+              <div class="exam-hover">
+                <div class="exam-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/exam/02-thumbnail.jpg" alt="">
+            </a>
+            <div class="exam-caption">
+              <h4>EXERCISE</h4>
+              <p class="text-muted">enter the exam</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 exam-item">
+            <a class="exam-link" id="goal-check-link" href=javascript:void(0)>
+              <div class="exam-hover">
+                <div class="exam-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="img/exam/03-thumbnail.jpg" alt="">
+            </a>
+            <div class="exam-caption">
+              <h4>Check</h4>
+              <p class="text-muted">Check your goals</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- usersetting -->
+    <section id="usersetting">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">User Settings</h2>
+            <!--h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <form id="usersettingForm" name="sentMessage" novalidate>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *" required data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *" required data-validation-required-message="Please enter your email address.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" required data-validation-required-message="Please enter your phone number.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <textarea class="form-control" id="message" placeholder="Your Message *" required data-validation-required-message="Please enter a message."></textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <span class="copyright">Copyright &copy; 2017 Pixam.com</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                Privacy Policy
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- create Modals -->
+
+
+    <!-- Modal 2 -->
+    <div class="exam-modal modal fade" id="create-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Paper Import</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+            <div class="row">
+                <div class="col-md-6">
+                  <h5>write exam title</h5>
+                </div>
+                <div class="col-md-6">
+                  <h5>choose your time</h5>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-6">
+                  <input type="text" id="create-exam-title">
+                </div>
+                <div class="input-group date form_datetime col-md-6" data-date-format="yyyy-MM-dd HH:ii:ss" data-link-field="dtp_input1" id="create-time-get">
+                  <input class="form-control" size="16" type="text" value="" readonly id="create-time-get-input">
+                  <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-md-12">
+                  <h5>write exam description</h5>
+                  <input type="text" id="create-exam-description">
+                </div>
+              </div>
+              <br>
+
+              <h5>choose your question template</h5>
+              <div class="file-loading">
+                <input id="fileinput-question"  type="file" />
+              </div>
+              <div id="question-file-errors"></div>
+              <br>
+              <h5>choose your answer template</h5>
+              <div class="file-loading">
+                <input id="fileinput-answer"  type="file" />
+              </div>
+              <div id="answer-file-errors"></div>
+              <br>
+              <h5>choose your test takers list</h5>
+              <div class="file-loading">
+                <input id="fileinput-access"  type="file" />
+              </div>
+              <div id="access-file-errors"></div>
+              <br>
+              <br>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="fileinput-import">Import</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal exam-choosepaper -->
+    <div class="exam-modal modal fade" id="exam-paper-choose" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!--img class="img-fluid d-block mx-auto" src="img/exam/01-full.jpg" alt=""-->
+                  <select id="testselect">
+                  </select>
+                  <h4 class="view-text-r-tit" id="selectdeadline">deadline</h4>
+                  <h4 class="view-text-r-tit" id="selecttitle">exam title</h4>
+                  <h5 class="view-text-r-main view-padding" id="selectdescrip">exam description</h5>
+
+                  <h4 class="list-inline">Are you sure to enter the exam?
+                  </h4>
+
+                  <button class="btn btn-paper-confirm" id="exam-paper-confirm" type="button">
+                    Enter</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal exam-modal -->
+    <div class="exam-modal modal fade" id="exam-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h3 class="section-subheading text-muted" id="showtime">time</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="close-modal" id="exam-close">
+                <!--div class="close-modal" data-dismiss="modal"-->
+                <div class="lr">
+                  <div class="rl"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <!--h2 class="text-uppercase">Project Name</h2-->
+
+                  <!--img class="img-fluid d-block mx-auto" src="img/exam/01-full.jpg" alt=""-->
+                    <div  id="exam-content-question">
+                      <div class="exam-readview">
+                        <p class="item-intro text-muted" id="question-context">
+                          <span>Question <span id="curindex">n</span> of <span id="maxindex">m</span></span>
+                        </p>
+                          <p class="question g-f16" id="quizcontent">
+                          </p>
+                      </div>
+                    </div>
+                    <div class="row" id="exam-content-choice" display="none">
+                        <div class="exam-readview">
+                              <ul class="g-kmf-form answers-radio js-kmf-form radio js-answers" id="checkul">
+                                <li><input type="checkbox"  name="ke[]" value="1">
+                                  <span class="main" id="amain" name="tgtspan"></span></li>
+
+                                <li><input type="checkbox"  name="ke[]" value="2">
+                                  <span class="main" id="bmain" name="tgtspan"></span></li>
+
+                                <li><input type="checkbox"  name="ke[]" value="3">
+                                  <span class="main" id="cmain" name="tgtspan"></span></li>
+
+                                <li><input type="checkbox"  name="ke[]" value="4">
+                                  <span class="main" id="dmain" name="tgtspan"></span></li>
+
+                              </ul>
+                        </div>
+                    </div>
+
+                    <!-- /.row -->
+
+
+                        <div id="exam-content-review" style="display: none">
+                          <p class="item-intro text-muted">Review List</p>
+                          <table  class="display" id="exam-content-review-table" cellspacing="0" width="100%">
+                            <thead>
+                            <tr>
+                              <th>Question</th>
+                              <th>Answer</th>
+
+                            </tr>
+                            </thead>
+                            <tfoot>
+                            <tr>
+                              <th>Question</th>
+                              <th>Answer</th>
+                            </tr>
+                            </tfoot>
+                            <tbody>
+                            </tbody>
+                          </table>
+                        </div>
+
+
+                  <button class="btn btn-former" id="exam-former" type="button">
+                    Former</button>
+                  <button class="btn btn-reviw" id="exam-review" type="button">
+                    Review</button>
+                  <button class="btn btn-next" id="exam-next" type="button">
+                    Next</button>
+                  <button class="btn btn-former" id="exam-review-back" type="button" style="display: none">
+                    Back</button>
+                  <button class="btn btn-next" id="exam-review-submit" type="button" style="display: none">
+                    Submit</button>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal exam-exit-modal -->
+    <div class="exam-exit-modal modal model fade" id="exam-exit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!--img class="img-fluid d-block mx-auto" src="img/exam/01-full.jpg" alt=""-->
+                  <h2>Warning</h2>
+                  <ul class="list-inline">Are you sure to quit the exam?
+                  </ul>
+                  <button class="btn btn-exam-exit-confirm" id="exam-confirm" type="button">
+                    Yes</button>
+                  <button class="btn btn-exam-exit-cancel" id="exam-cancel" type="button">
+                    No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal goals-check -->
+    <div class="exam-modal modal fade" id="goal-modal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container">
+            <div class="row">
+              <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                  <div class="rl"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <p class="item-intro text-muted">Exam Goals</p>
+                  <table  class="display" id="goal-check-table" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                      <th>Exam</th>
+                      <th>Goal</th>
+
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                      <th>Exam</th>
+                      <th>Goal</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="exam-modal modal fade" id="examModal3" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Finish</li>
+                    <li>Category: Identity</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6 -->
+    <div class="exam-modal modal fade" id="examModal6" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2 class="text-uppercase">Project Name</h2>
+                  <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                  <img class="img-fluid d-block mx-auto" src="img/exam/06-full.jpg" alt="">
+                  <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                  <ul class="list-inline">
+                    <li>Date: January 2017</li>
+                    <li>Client: Window</li>
+                    <li>Category: Photography</li>
+                  </ul>
+                  <button class="btn btn-primary" data-dismiss="modal" type="button">
+                    <i class="fa fa-times"></i>
+                    Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/table/jquery.dataTables.min.js"></script>
+
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/fileinput/fileinput.min.js"></script>
+    <script src="vendor/fileinput/xlsx.full.min.js"></script>
+    <script src="vendor/timepicker/bootstrap-datetimepicker.js"></script>
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.js"></script>
+    <script src="js/exam.js"></script>
+  </body>
+
+</html>
